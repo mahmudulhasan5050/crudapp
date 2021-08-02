@@ -31,11 +31,10 @@ function App() {
       movieReview: review,
       movieRating: rateMovie
     }
-    movieServices.createReview(obj);
-
+    movieServices.createReview(obj).then(response =>{
     setMovieList([...movieList,
     { mname: movieName, mreview: review, rating: rateMovie }
-    ]);
+    ]);})
     setMovieName("");
     setReview("");
     setRateMovie(null);
